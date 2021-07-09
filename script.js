@@ -19,7 +19,9 @@ function formsubmit(){
         let tr = createElement("tr");
         let tdFirstName = createElement("td",firstName);
         let tdLastName = createElement("td",lastName);
-        let tdAddress = createElement("td",inputAddress1 + ", " + inputAddress2);
+        if(inputAddress2.length !== 0)
+            inputAddress1 = inputAddress1 + ", " + inputAddress2;
+        let tdAddress = createElement("td",inputAddress1);
         let tdPinccode = createElement("td",pincode);
         let tdGender = createElement("td",gender);
         let tdFood = createElement("td", food.join(","));
